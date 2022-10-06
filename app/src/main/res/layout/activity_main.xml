@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="178dp"
+        android:layout_height="127dp"
+        android:contentDescription="App title"
+        android:fontFamily="sans-serif-black"
+        android:text="Vamos Rachar!"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="109dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+            <EditText
+                android:id="@+id/peopleValue"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Pessoas"
+                android:inputType="number"
+
+                android:textSize="48sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="126dp">
+
+            <TextView
+                android:id="@+id/moneyLabel"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="R$"
+                android:textAlignment="center"
+                android:textSize="60sp" />
+
+            <EditText
+                android:id="@+id/moneyValue"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Conta"
+                android:inputType="number"
+                android:textSize="48sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/splitValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="R$ 0,00"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/splitValue"
+        app:layout_constraintStart_toStartOf="@+id/splitValue"
+        app:layout_constraintTop_toBottomOf="@+id/splitValue">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/shareButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:accessibilityHeading="false"
+            android:clickable="true"
+            android:contentDescription="Share Button"
+            android:cropToPadding="false"
+            android:visibility="visible"
+            app:fabCustomSize="80dp"
+            app:fabSize="auto"
+            app:maxImageSize="50dp"
+            app:srcCompat="@android:drawable/ic_menu_share" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/voiceButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="Text to Speak Button"
+            android:visibility="visible"
+            app:fabCustomSize="80dp"
+            app:maxImageSize="50dp"
+            app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
