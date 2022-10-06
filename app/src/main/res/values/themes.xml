@@ -1,10 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ConstraintLayoutAula" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.ProgMob" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/color_main</item>
         <item name="colorPrimaryVariant">@color/color_main_alternative</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/on_day</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/color_sec</item>
         <item name="colorSecondaryVariant">@color/color_sec_alternative</item>
@@ -12,5 +12,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textColorHint">@color/color_main_alternative</item>
     </style>
 </resources>

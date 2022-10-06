@@ -9,7 +9,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="color_main">#39AFEA</color>
-    <color name="color_main_alternative">#007ac1</color>
+    <color name="color_main_alternative">#2A82AD</color>
+
+    <color name="on_day">#4B4A4A</color>
+    <color name="on_night">#FFFFFF</color>
+
 
     <color name="color_sec">#39AFEA</color>
     <color name="color_sec_alternative">#002984</color>
