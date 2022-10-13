@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Vamos Rachar</string>
+    <string name="hintPeople">Pessoas</string>
+    <string name="hintMoney">Conta</string>
 </resources>

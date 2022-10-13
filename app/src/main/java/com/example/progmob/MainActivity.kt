@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         //TTS config
         tts = TextToSpeech(this,this)
 
+        Log.i("idioma", Locale.getDefault().getDisplayLanguage())
+
 
         //Views
         var moneyValue = findViewById<EditText>(R.id.moneyValue)
@@ -107,8 +109,15 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
 
-            //Setting language of tts
-            val result = tts!!.setLanguage(Locale.US)
+            var result : Int? = null
+
+            //Setting language of tts by device language
+            if(Locale.getDefault().getDisplayLanguage() != "English"){
+                result = tts!!.setLanguage(Locale("pt", "BR"))
+            }else {
+                result = tts!!.setLanguage(Locale.US)
+            }
+
 
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                 Log.e("TTS","The Language specified is not supported!")
